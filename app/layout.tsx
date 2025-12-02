@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Interithm",
+  title: "Interithm | Software Company Building Developer Tools",
   description: "Created By Interithm",
 };
 
