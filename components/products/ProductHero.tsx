@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layers3, Settings, ShieldCheck } from 'lucide-react';
 
-const ProductHero = () => {
+const ProductHero: React.FC = () => {
     return (
         <div className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-slate-900 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -62,17 +62,27 @@ const ProductHero = () => {
     );
 };
 
+// Add explicit types so 'Icon' is not implicitly any
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
+interface PillarCardProps {
+	icon: IconComponent;
+	title: string;
+	description: string;
+	className?: string;
+}
+
 // Helper Component for Visualizing Key Pillars
-const PillarCard = ({ icon: Icon, title, description, className = '' }) => (
-    <div className={`p-4 md:p-5 bg-slate-800/50 rounded-lg border border-white/5 ${className} flex items-start gap-4 hover:translate-y-0.5 transition-transform`}>
-        <div className="p-3 md:p-4 rounded-full bg-indigo-500/20 text-indigo-400 flex-shrink-0 flex items-center justify-center">
-            <Icon className="w-5 h-5 md:w-6 md:h-6" />
-        </div>
-        <div>
-            <h3 className="text-sm md:text-md font-bold text-white mb-1">{title}</h3>
-            <p className="text-xs text-slate-400">{description}</p>
-        </div>
-    </div>
+const PillarCard: React.FC<PillarCardProps> = ({ icon: Icon, title, description, className = '' }) => (
+	<div className={`p-4 md:p-5 bg-slate-800/50 rounded-lg border border-white/5 ${className} flex items-start gap-4 hover:translate-y-0.5 transition-transform`}>
+		<div className="p-3 md:p-4 rounded-full bg-indigo-500/20 text-indigo-400 flex-shrink-0 flex items-center justify-center">
+			<Icon className="w-5 h-5 md:w-6 md:h-6" />
+		</div>
+		<div>
+			<h3 className="text-sm md:text-md font-bold text-white mb-1">{title}</h3>
+			<p className="text-xs text-slate-400">{description}</p>
+		</div>
+	</div>
 );
 
 export default ProductHero;

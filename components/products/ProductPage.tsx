@@ -37,8 +37,25 @@ const AVAILABLE_PRODUCTS = [
   },
 ];
 
-// --- ProductCard Component (Changes applied here) ---
-const ProductCard = ({ product, onAddToCart }) => {
+// --- Types (new) ---
+type Product = {
+  id: string;
+  name: string;
+  image?: string;
+  description?: string;
+  icon?: React.ReactNode;
+  rating?: number;
+  link?: string;
+  features: string[];
+};
+
+interface ProductCardProps {
+  product: Product;
+  onAddToCart?: (product: Product) => void;
+}
+
+// --- ProductCard Component (typed) ---
+const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
   const router = useRouter();
 
   // navigate to product details page
@@ -49,7 +66,7 @@ const ProductCard = ({ product, onAddToCart }) => {
   };
 
   // support Enter/Space to activate card
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       handleCardClick();
@@ -57,9 +74,9 @@ const ProductCard = ({ product, onAddToCart }) => {
   };
 
   // find matching meta (color/icon) from shared PRODUCTS
-  const meta = PRODUCTS.find(p => p.id === product.id) || {};
-  const color = meta.color || 'from-indigo-500 to-indigo-400';
-  const metaIcon = meta.icon || product.icon;
+  const meta = PRODUCTS.find(p => p.id === product.id) as (Partial<{ color?: string; icon?: React.ReactNode }> | undefined);
+  const color = meta?.color ?? 'from-indigo-500 to-indigo-400';
+  const metaIcon = meta?.icon ?? product.icon;
 
   return (
     // Make the whole card clickable and keyboard accessible
@@ -120,24 +137,21 @@ const ProductCard = ({ product, onAddToCart }) => {
 };
 
 
-const ProductPage = () => {
+const ProductPage: React.FC = () => {
 
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState<Array<Product & { quantity: number }>>([]);
 
-  
-  const handleAddToCart = (productToAdd) => {
+  const handleAddToCart = (productToAdd: Product) => {
     setCart(prevCart => {
       const existingItem = prevCart.find(item => item.id === productToAdd.id);
 
       if (existingItem) {
-  
         return prevCart.map(item =>
           item.id === productToAdd.id
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
       } else {
-      
         return [...prevCart, { ...productToAdd, quantity: 1 }];
       }
     });

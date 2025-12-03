@@ -3,19 +3,20 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Cpu, Briefcase, Users } from 'lucide-react';
 
-const AboutContactPage = () => {
-    const [formData, setFormData] = useState({
+const AboutContactPage: React.FC = () => {
+    const [formData, setFormData] = useState<{ name: string; email: string; message: string }>({
         name: '',
         email: '',
         message: ''
     });
-    const [submissionStatus, setSubmissionStatus] = useState('');
+    const [submissionStatus, setSubmissionStatus] = useState<string>('');
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name as keyof typeof prev]: value }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setSubmissionStatus('Sending...');
 
@@ -88,7 +89,7 @@ const AboutContactPage = () => {
                                 <textarea
                                     id="message"
                                     name="message"
-                                    rows="5"
+                                    rows={5}
                                     value={formData.message}
                                     onChange={handleChange}
                                     required
@@ -122,7 +123,14 @@ const AboutContactPage = () => {
 
 // --- Helper Components ---
 
-const ContactItem = ({ icon: Icon, title, text, href }) => (
+type ContactItemProps = {
+    icon: React.ComponentType<{ className?: string }>;
+    title: string;
+    text: string;
+    href?: string;
+};
+
+const ContactItem: React.FC<ContactItemProps> = ({ icon: Icon, title, text, href }) => (
     <a href={href} target={href ? "_blank" : "_self"} className={`flex items-start gap-4 p-4 rounded-lg transition-colors ${href ? 'hover:bg-slate-800/50 cursor-pointer' : ''}`}>
         <Icon className="w-6 h-6 text-indigo-400 mt-1 flex-shrink-0" />
         <div>
@@ -132,7 +140,7 @@ const ContactItem = ({ icon: Icon, title, text, href }) => (
     </a>
 );
 
-const CheckMark = () => (
+const CheckMark: React.FC = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-emerald-400 mt-0.5 mr-3 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
 );
 

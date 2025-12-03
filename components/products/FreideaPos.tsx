@@ -113,8 +113,23 @@ const FreideaPosPage = () => {
 };
 
 // --- Helper Components ---
+//
+// Add explicit types so `icon: Icon` does not have an implicit `any`.
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
-const HighlightCard = ({ icon: Icon, title, description }) => (
+interface HighlightCardProps {
+    icon: IconComponent;
+    title: string;
+    description: string;
+}
+
+interface DetailedCardProps {
+    icon: IconComponent;
+    title: string;
+    description: string;
+}
+
+const HighlightCard: React.FC<HighlightCardProps> = ({ icon: Icon, title, description }) => (
     <div className="p-8 bg-slate-900 rounded-xl border border-white/10 shadow-lg text-center group transition-transform hover:scale-[1.02]">
         <div className="inline-block p-4 rounded-full bg-blue-500/20 text-blue-400 mb-4 transition-transform group-hover:scale-110">
             <Icon className="w-8 h-8" />
@@ -124,10 +139,10 @@ const HighlightCard = ({ icon: Icon, title, description }) => (
     </div>
 );
 
-const DetailedCard = ({ icon: Icon, title, description }) => (
+const DetailedCard: React.FC<DetailedCardProps> = ({ icon: Icon, title, description }) => (
     <div className="p-6 bg-slate-950 rounded-xl border border-white/5 space-y-3">
         <div className="flex items-center gap-3">
-            <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+            <Icon className="w-5 h-5 text-cyan-400 flex-shrink-0" />
             <h4 className="text-lg font-semibold text-white">{title}</h4>
         </div>
         <p className="text-slate-500 text-sm ml-8">{description}</p>
