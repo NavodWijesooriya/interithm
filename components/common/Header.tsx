@@ -59,10 +59,10 @@ const Header = () => {
                 <div className="md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-white/10 p-4 animate-in slide-in-from-top-5">
                     <div className="flex flex-col space-y-4">
                         <a href="/" className="text-slate-300 hover:text-white">Home</a>
-                        <a href="#products" className="text-slate-300 hover:text-white">Products</a>
+                        <a href="/products" className="text-slate-300 hover:text-white">Products</a>
                         <a href="#solutions" className="text-slate-300 hover:text-white">Solutions</a>
                         <a href="#pricing" className="text-slate-300 hover:text-white">Pricing</a>
-                        <a href="#contact" className="text-slate-300 hover:text-white">Contact</a>
+                        <a href="/contact" className="text-slate-300 hover:text-white">Contact</a>
                         <button className="w-full bg-indigo-600 text-white py-3 rounded-lg font-medium">Get Started</button>
                     </div>
                 </div>
