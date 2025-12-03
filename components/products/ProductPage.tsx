@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Zap, BarChart, Terminal, CheckCircle2, Star } from 'lucide-react';
 import { PRODUCTS } from '../HomeProducts';
+import { useRouter } from 'next/navigation';
 
 // --- Product Data (No change needed here for the request) ---
 const AVAILABLE_PRODUCTS = [
@@ -13,6 +14,7 @@ const AVAILABLE_PRODUCTS = [
     description: 'Real-time data engine for enterprise-level reporting and AI forecasting.',
     icon: <BarChart className="w-8 h-8 text-blue-500" />,
     rating: 4.8,
+    link: '/products/freideapos',
     features: ['Unlimited Projects', 'Custom Dashboards', 'API Access']
   },
   {
@@ -37,14 +39,38 @@ const AVAILABLE_PRODUCTS = [
 
 // --- ProductCard Component (Changes applied here) ---
 const ProductCard = ({ product, onAddToCart }) => {
+  const router = useRouter();
+
+  // navigate to product details page
+  const handleCardClick = () => {
+    if (product.link) {
+      router.push(product.link);
+    }
+  };
+
+  // support Enter/Space to activate card
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handleCardClick();
+    }
+  };
+
   // find matching meta (color/icon) from shared PRODUCTS
   const meta = PRODUCTS.find(p => p.id === product.id) || {};
   const color = meta.color || 'from-indigo-500 to-indigo-400';
   const metaIcon = meta.icon || product.icon;
 
   return (
-    // Reduced padding: p-6 -> p-4
-    <div className="bg-slate-900 border border-white/10 rounded-lg p-4 flex flex-col hover:border-indigo-500/50 transition-all duration-300">
+    // Make the whole card clickable and keyboard accessible
+    <div
+      role="button"
+      tabIndex={0}
+      onClick={handleCardClick}
+      onKeyDown={handleKeyDown}
+      className="bg-slate-900 border border-white/10 rounded-lg p-4 flex flex-col hover:border-indigo-500/50 transition-all duration-300 cursor-pointer"
+      aria-label={`Open details for ${product.name}`}
+    >
       <div className="flex items-center justify-between mb-3">
         {/* gradient icon badge to match Products page */}
         <div className={`inline-block p-2 rounded-lg bg-gradient-to-br ${color} mb-0 text-white shadow-lg`}>
@@ -81,12 +107,13 @@ const ProductCard = ({ product, onAddToCart }) => {
 
       {/* Price/Details section, removed price calculation elements */}
       <div className="mt-auto pt-3 border-t border-white/5">
-        <button
-          onClick={() => onAddToCart(product)}
+        {/* <button
+          onClick={(e) => { e.stopPropagation(); onAddToCart(product); }}
           className="w-full py-2 text-sm bg-indigo-600 text-white rounded-md font-semibold hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2"
+          aria-label={`Add ${product.name} to cart`}
         >
-          View Details
-        </button>
+          Add to Cart
+        </button> */}
       </div>
     </div>
   );
