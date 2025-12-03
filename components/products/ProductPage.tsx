@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Zap, BarChart, Terminal, CheckCircle2, Star } from 'lucide-react';
-import { PRODUCTS } from './Products';
+import { PRODUCTS } from '../HomeProducts';
 
 // --- Product Data (No change needed here for the request) ---
 const AVAILABLE_PRODUCTS = [
@@ -33,16 +33,6 @@ const AVAILABLE_PRODUCTS = [
     rating: 4.9,
     features: ['DDOS Protection', 'Audit Logs', 'SOC2 Compliance']
   },
-
-    {
-    id: 'aegis_guard',
-    name: 'Sinhala KeyHelp',
-    image: '/assets/products/sinhala-keyhelp-thumbnail.png', // added image
-    description: 'Zero-trust security and compliance tooling for cloud infrastructure.',
-    icon: <Zap className="w-8 h-8 text-emerald-500" />,
-    rating: 4.9,
-    features: ['DDOS Protection', 'Audit Logs', 'SOC2 Compliance']
-  }
 ];
 
 // --- ProductCard Component (Changes applied here) ---

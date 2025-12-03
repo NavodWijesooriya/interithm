@@ -3,6 +3,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 
+
 const Hero = () => {
   return (
     <div className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
@@ -74,7 +75,7 @@ const Hero = () => {
             </div>
           </div>
         </div> */}
-        
+
       </div>
     </div>
   );

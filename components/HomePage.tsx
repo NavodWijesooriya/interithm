@@ -6,7 +6,7 @@ import {Layout} from 'lucide-react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import Hero from '../components/Hero';
-import Products from '../components/Products';
+import Products from './HomeProducts';
 
 
 const PRICING = [

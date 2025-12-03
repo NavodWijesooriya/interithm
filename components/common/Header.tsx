@@ -36,7 +36,7 @@ const Header = () => {
                         <a href="/products" className="text-slate-300 hover:text-white transition-colors text-sm font-medium">Products</a>
                         <a href="#solutions" className="text-slate-300 hover:text-white transition-colors text-sm font-medium">Solutions</a>
                         <a href="#pricing" className="text-slate-300 hover:text-white transition-colors text-sm font-medium">Pricing</a>
-                        <a href="#docs" className="text-slate-300 hover:text-white transition-colors text-sm font-medium">Docs</a>
+                        <a href="/contact" className="text-slate-300 hover:text-white transition-colors text-sm font-medium">Contact</a>
                         {/* <button className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium transition-all border border-white/10">
                             Sign In
                         </button> */}

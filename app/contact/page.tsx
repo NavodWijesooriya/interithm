@@ -1,16 +1,14 @@
 import React from 'react'
-import ProductPage from '../../components/products/ProductPage'
+import Contact from '../../components/Contact'
 import Header from '../../components/common/Header'
 import Footer from '../../components/common/Footer'
-import ProductHero from '../../components/products/ProductHero'
 
 const page = () => {
   return (
     <div>
-      <Header />
-      <ProductHero />
-      <ProductPage />
-      <Footer />
+        <Header />
+        <Contact />
+        <Footer />
     </div>
   )
 }
