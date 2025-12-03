@@ -21,33 +21,36 @@ const ProductHero = () => {
                 </p>
 
                 {/* Key Pillars */}
-                <div className="flex justify-center gap-6 max-w-4xl mx-auto animate-fade-in-up">
-                    <PillarCard 
-                        icon={Layers3} 
-                        title="Integrated Solutions" 
+                <div className="flex flex-col sm:flex-row justify-center items-center sm:items-start gap-y-4 sm:gap-x-6 max-w-4xl mx-auto animate-fade-in-up">
+                    <PillarCard
+                        className="w-full sm:w-auto text-center sm:text-left"
+                        icon={Layers3}
+                        title="Integrated Solutions"
                         description="Seamlessly connect your POS, Payroll, and Utilities."
                     />
-                    <PillarCard 
-                        icon={ShieldCheck} 
-                        title="Compliance Focused" 
+                    <PillarCard
+                        className="w-full sm:w-auto text-center sm:text-left"
+                        icon={ShieldCheck}
+                        title="Compliance Focused"
                         description="Tools built with local regulatory requirements in mind."
                     />
-                    <PillarCard 
-                        icon={Settings} 
-                        title="Zero Setup Friction" 
+                    <PillarCard
+                        className="w-full sm:w-auto text-center sm:text-left"
+                        icon={Settings}
+                        title="Zero Setup Friction"
                         description="Get deployed and running in minutes, not days."
                     />
                 </div>
 
                 {/* Call to Action (Optional) */}
-                <div className="mt-12">
+                {/* <div className="mt-12">
                     <a
                         href="#products-grid"
                         className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-slate-200 transition-colors shadow-lg shadow-indigo-500/20 gap-2"
                     >
                         Explore All Products &rarr;
                     </a>
-                </div>
+                </div> */}
             </div>
             
             {/* Decorative Background Blur */}
@@ -60,10 +63,10 @@ const ProductHero = () => {
 };
 
 // Helper Component for Visualizing Key Pillars
-const PillarCard = ({ icon: Icon, title, description }) => (
-    <div className="p-4 md:p-5 bg-slate-800/50 rounded-lg border border-white/5 text-left flex items-start gap-4 hover:translate-y-0.5 transition-transform">
-        <div className="p-3 md:p-4 rounded-full bg-indigo-500/20 text-indigo-400 flex-shrink-0">
-            <Icon className="w-6 h-6" />
+const PillarCard = ({ icon: Icon, title, description, className = '' }) => (
+    <div className={`p-4 md:p-5 bg-slate-800/50 rounded-lg border border-white/5 ${className} flex items-start gap-4 hover:translate-y-0.5 transition-transform`}>
+        <div className="p-3 md:p-4 rounded-full bg-indigo-500/20 text-indigo-400 flex-shrink-0 flex items-center justify-center">
+            <Icon className="w-5 h-5 md:w-6 md:h-6" />
         </div>
         <div>
             <h3 className="text-sm md:text-md font-bold text-white mb-1">{title}</h3>

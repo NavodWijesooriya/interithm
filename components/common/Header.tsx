@@ -60,6 +60,7 @@ const Header = () => {
                         <a href="#products" className="text-slate-300 hover:text-white">Products</a>
                         <a href="#solutions" className="text-slate-300 hover:text-white">Solutions</a>
                         <a href="#pricing" className="text-slate-300 hover:text-white">Pricing</a>
+                        <a href="#contact" className="text-slate-300 hover:text-white">Contact</a>
                         <button className="w-full bg-indigo-600 text-white py-3 rounded-lg font-medium">Get Started</button>
                     </div>
                 </div>
