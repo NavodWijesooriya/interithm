@@ -30,44 +30,6 @@ const AboutContactPage = () => {
     return (
         <div className="py-24 bg-slate-950 min-h-screen">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                <header className="text-center mb-16">
-                    <h1 className="text-5xl font-extrabold text-white mb-4">Get to Know Us</h1>
-                    <p className="text-xl text-indigo-400">Our Mission, Our Team, and How to Connect</p>
-                </header>
-
-                {/* --- 1. ABOUT US SECTION --- */}
-                <section className="mb-24 p-10 bg-slate-900 rounded-xl border border-white/10 shadow-lg">
-                    <h2 className="text-4xl font-bold text-white mb-8 border-b border-indigo-500/50 pb-4 flex items-center">
-                        <Cpu className="w-8 h-8 text-indigo-500 mr-3" />
-                        Our Story & Mission
-                    </h2>
-                    
-                    <div className="grid md:grid-cols-2 gap-10 text-slate-300">
-                        <div className="space-y-6">
-                            <p className="text-lg leading-relaxed">
-                                **Interithm** was founded on the principle of bridging the gap between complex engineering and practical usability. We believe that world-class software tools shouldn't require an army of specialists to operate. Our journey began in a small garage, driven by a simple idea: **empower developers to build the future, faster.**
-                            </p>
-                            <p className="leading-relaxed border-l-4 border-indigo-600 pl-4 italic text-slate-400">
-                                "Our mission is to create intelligent, integrated software solutions that drastically reduce development friction and elevate the quality of life for engineering teams worldwide."
-                            </p>
-                        </div>
-                        <div className="space-y-6">
-                            <h3 className="text-2xl font-semibold text-white flex items-center"><Briefcase className="w-5 h-5 mr-2 text-indigo-400"/> Core Philosophy</h3>
-                            <ul className="space-y-3">
-                                <li className="flex items-start">
-                                    <CheckMark /> **Simplicity:** Elegant interfaces hiding powerful complexity.
-                                </li>
-                                <li className="flex items-start">
-                                    <CheckMark /> **Integration:** Tools designed to talk to each other seamlessly.
-                                </li>
-                                <li className="flex items-start">
-                                    <CheckMark /> **Scalability:** Built to handle everything from prototypes to petabytes.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
                 
                 {/* --- 2. CONTACT US SECTION --- */}
                 <section className="grid lg:grid-cols-3 gap-12">
