@@ -40,7 +40,7 @@ const Hero = () => {
         </div>
 
         {/* Dashboard Mockup */}
-        <div className="relative mx-auto max-w-5xl rounded-xl border border-white/10 bg-slate-900/50 backdrop-blur-sm shadow-2xl overflow-hidden group">
+        {/* <div className="relative mx-auto max-w-5xl rounded-xl border border-white/10 bg-slate-900/50 backdrop-blur-sm shadow-2xl overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10"></div>
           <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-slate-900">
             <div className="flex gap-1.5">
@@ -50,7 +50,7 @@ const Hero = () => {
             </div>
             <div className="ml-4 w-64 h-2 rounded-full bg-white/10"></div>
           </div>
-          {/* Mock Content */}
+      
           <div className="p-6 grid grid-cols-3 gap-6 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
             <div className="col-span-2 space-y-4">
               <div className="h-40 bg-white/5 rounded-lg w-full relative overflow-hidden">
@@ -73,7 +73,8 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+        
       </div>
     </div>
   );

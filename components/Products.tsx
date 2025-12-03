@@ -11,9 +11,9 @@ import {
   ArrowRight
 } from 'lucide-react';
 
-const PRODUCTS = [
+export const PRODUCTS = [
   {
-    id: 'analytics',
+    id: 'freidea_pos',
     title: 'Freidea Pos',
     description: 'Real-time data visualization for enterprise scale applications.',
     icon: <BarChart className="w-6 h-6" />,
@@ -21,7 +21,7 @@ const PRODUCTS = [
     color: 'from-blue-500 to-cyan-400'
   },
   {
-    id: 'devtools',
+    id: 'payroll_expert',
     title: 'Payroll Expert',
     description: 'A cutting-edge payroll management system with finger-print support.',
     icon: <Terminal className="w-6 h-6" />,
@@ -29,7 +29,7 @@ const PRODUCTS = [
     color: 'from-purple-500 to-pink-400'
   },
   {
-    id: 'security',
+    id: 'sinhala_keyhelp',
     title: 'Sinhala KeyHelp',
     description: 'Sinhala KeyHelp runs in the background and handles modifiers (pillam).',
     icon: <Shield className="w-6 h-6" />,
