@@ -41,7 +41,7 @@ const AboutContactHero = () => {
                         Send a Message &rarr;
                     </a>
                     <a 
-                        href="#location-info" 
+                        href="https://maps.app.goo.gl/vXBqwXwVHSpMHE1V6" 
                         className="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/20 text-white rounded-full font-bold hover:bg-white/10 transition-colors flex items-center justify-center gap-2 group"
                     >
                         <MapPin className="w-4 h-4 fill-current group-hover:scale-110 transition-transform" /> Our Locations

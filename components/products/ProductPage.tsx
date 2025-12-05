@@ -24,6 +24,7 @@ const AVAILABLE_PRODUCTS = [
     description: 'Automated, lightning-fast deployment pipelines with instant rollback support.',
     icon: <Terminal className="w-8 h-8 text-purple-500" />,
     rating: 4.5,
+    link: '/products/payroll',
     features: ['500 Build Minutes', 'Docker & K8s Support', 'Parallel Testing']
   },
   {
@@ -33,6 +34,7 @@ const AVAILABLE_PRODUCTS = [
     description: 'Zero-trust security and compliance tooling for cloud infrastructure.',
     icon: <Zap className="w-8 h-8 text-emerald-500" />,
     rating: 4.9,
+    link: '/products/sinhala-keyhelp',
     features: ['DDOS Protection', 'Audit Logs', 'SOC2 Compliance']
   },
 ];

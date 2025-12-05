@@ -35,7 +35,7 @@ const Header = () => {
                     <div className="hidden md:flex items-center space-x-8">
                         <a href="/" className="text-slate-300 hover:text-white transition-colors text-sm font-medium">Home</a>
                         <a href="/products" className="text-slate-300 hover:text-white transition-colors text-sm font-medium">Products</a>
-                        <a href="#solutions" className="text-slate-300  hover:text-white transition-colors text-sm font-medium">Solutions</a>
+                        <a href="/solution" className="text-slate-300  hover:text-white transition-colors text-sm font-medium">Solutions</a>
                         <a href="#pricing" className="text-slate-300 hover:text-white transition-colors text-sm font-medium">Pricing</a>
                         <a href="/contact" className="text-slate-300 hover:text-white transition-colors text-sm font-medium">Contact</a>
                         {/* <button className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium transition-all border border-white/10">
@@ -60,7 +60,7 @@ const Header = () => {
                     <div className="flex flex-col space-y-4">
                         <a href="/" className="text-slate-300 hover:text-white">Home</a>
                         <a href="/products" className="text-slate-300 hover:text-white">Products</a>
-                        <a href="#solutions" className="text-slate-300 hover:text-white">Solutions</a>
+                        <a href="/solution" className="text-slate-300 hover:text-white">Solutions</a>
                         <a href="#pricing" className="text-slate-300 hover:text-white">Pricing</a>
                         <a href="/contact" className="text-slate-300 hover:text-white">Contact</a>
                         <button className="w-full bg-indigo-600 text-white py-3 rounded-lg font-medium">Get Started</button>
