@@ -48,7 +48,7 @@ const SOLUTIONS = [
 ];
 
 // --- Solution Card Component ---
-const SolutionCard = ({ solution }) => {
+const SolutionCard = ({ solution }: { solution: typeof SOLUTIONS[0] }) => {
     const Icon = solution.icon;
     
     return (
