@@ -43,7 +43,7 @@ const AboutContactPage: React.FC = () => {
                         
                         <div className="space-y-6">
                             <ContactItem icon={Mail} title="Email Support" text="support@interithm.com" href="mailto:support@interithm.com" />
-                            <ContactItem icon={Phone} title="Sales Hotline" text="+1 (555) 123-4567" href="tel:+15551234567" />
+                            <ContactItem icon={Phone} title="Sales Hotline" text="+94 (71) 123-4567" href="tel:+94711234567" />
                             <ContactItem icon={MapPin} title="Our Headquarters" text="82/A Katunayake-Veyangoda Rd, Minuwangoda 11550" />
                         </div>
                         <p className="text-sm text-slate-500 pt-4">
