@@ -116,6 +116,18 @@ const AboutContactPage: React.FC = () => {
                     </div>
                 </section>
 
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31668.89763885031!2d79.943414!3d7.1707469999999995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2e5ee3d496d57%3A0xf3c93eb9a00a2499!2sInterithm!5e0!3m2!1sen!2slk!4v1765437491796!5m2!1sen!2slk"
+                    width="100%"
+                    height="450"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="mt-16 rounded-xl border border-white/10"
+                >
+                </iframe>
+
             </div>
         </div>
     );

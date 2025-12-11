@@ -3,14 +3,26 @@ import { Layers3, Settings, ShieldCheck } from 'lucide-react';
 
 const ProductHero: React.FC = () => {
     return (
-        <div className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-slate-900 overflow-hidden">
+        <div className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+            {/* Background Elements */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
+                <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-[100px]" />
+                <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/20 rounded-full blur-[100px]" />
+            </div>
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                 
+                {/* Pre-Header Tag */}
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-indigo-300 text-sm mb-8 animate-fade-in-up">
+                    <span className="flex h-2 w-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                    Our Complete Product Suite
+                </div>
+
                 {/* Hero Headline */}
                 <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-8 leading-tight">
-                   Our Products <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-sky-400 to-teal-400">
-                       For Customer Success
+                    Our Products <br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+                        For Customer Success
                     </span>
                 </h1>
 
@@ -41,22 +53,6 @@ const ProductHero: React.FC = () => {
                         description="Get deployed and running in minutes, not days."
                     />
                 </div>
-
-                {/* Call to Action (Optional) */}
-                {/* <div className="mt-12">
-                    <a
-                        href="#products-grid"
-                        className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-slate-200 transition-colors shadow-lg shadow-indigo-500/20 gap-2"
-                    >
-                        Explore All Products &rarr;
-                    </a>
-                </div> */}
-            </div>
-            
-            {/* Decorative Background Blur */}
-            <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-                <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-[100px]" />
-                <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/20 rounded-full blur-[100px]" />
             </div>
         </div>
     );

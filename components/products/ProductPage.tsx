@@ -37,6 +37,74 @@ const AVAILABLE_PRODUCTS = [
     link: '/products/sinhala-keyhelp',
     features: ['DDOS Protection', 'Audit Logs', 'SOC2 Compliance']
   },
+
+    {
+    id: 'aegis_guard',
+    name: '',
+    image: '/assets/products/', // added image
+    description: 'Zero-trust security and compliance tooling for cloud infrastructure.',
+    icon: <Zap className="w-8 h-8 text-emerald-500" />,
+    rating: 4.9,
+    link: '/products/sinhala-keyhelp',
+    features: ['DDOS Protection', 'Audit Logs', 'SOC2 Compliance']
+  },
+
+      {
+    id: 'aegis_guard',
+    name: '',
+    image: '/assets/products/', // added image
+    description: 'Zero-trust security and compliance tooling for cloud infrastructure.',
+    icon: <Zap className="w-8 h-8 text-emerald-500" />,
+    rating: 4.9,
+    link: '/products/sinhala-keyhelp',
+    features: ['DDOS Protection', 'Audit Logs', 'SOC2 Compliance']
+  },
+
+        {
+    id: 'aegis_guard',
+    name: '',
+    image: '/assets/products/', // added image
+    description: 'Zero-trust security and compliance tooling for cloud infrastructure.',
+    icon: <Zap className="w-8 h-8 text-emerald-500" />,
+    rating: 4.9,
+    link: '/products/sinhala-keyhelp',
+    features: ['DDOS Protection', 'Audit Logs', 'SOC2 Compliance']
+  },
+
+
+        {
+    id: 'aegis_guard',
+    name: '',
+    image: '/assets/products/', // added image
+    description: 'Zero-trust security and compliance tooling for cloud infrastructure.',
+    icon: <Zap className="w-8 h-8 text-emerald-500" />,
+    rating: 4.9,
+    link: '/products/sinhala-keyhelp',
+    features: ['DDOS Protection', 'Audit Logs', 'SOC2 Compliance']
+  },
+
+        {
+    id: 'aegis_guard',
+    name: '',
+    image: '/assets/products/', // added image
+    description: 'Zero-trust security and compliance tooling for cloud infrastructure.',
+    icon: <Zap className="w-8 h-8 text-emerald-500" />,
+    rating: 4.9,
+    link: '/products/sinhala-keyhelp',
+    features: ['DDOS Protection', 'Audit Logs', 'SOC2 Compliance']
+  },
+
+
+        {
+    id: 'aegis_guard',
+    name: '',
+    image: '/assets/products', // added image
+    description: 'Zero-trust security and compliance tooling for cloud infrastructure.',
+    icon: <Zap className="w-8 h-8 text-emerald-500" />,
+    rating: 4.9,
+    link: '/products/sinhala-keyhelp',
+    features: ['DDOS Protection', 'Audit Logs', 'SOC2 Compliance']
+  },
 ];
 
 // --- Types (new) ---

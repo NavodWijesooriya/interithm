@@ -93,28 +93,30 @@ const SolutionCard = ({ solution }: { solution: typeof SOLUTIONS[0] }) => {
 
 // --- Hero Component (moved out of invalid return) ---
 const FreideaPosHero = () => (
-    <div className="relative pt-32 pb-24 bg-slate-900 overflow-hidden">
+    <div className="relative pt-32 pb-24 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-[100px]" />
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/20 rounded-full blur-[100px]" />
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            
-            {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-600/20 border border-blue-500/50 text-blue-300 text-sm mb-6 font-semibold">
-                <ShoppingCart className="w-4 h-4"/> Point of Sale Solution
-            </div> */}
 
             <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 leading-tight">
                 Solutions for Your: <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                Biggest Challenges
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+                    Biggest Challenges
                 </span>
             </h1>
 
             <p className="text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-                Interithm products are not just tools; they are not integrated solutions built to solve real-world problems in retail, HR, and technical deployment.
+                Interithm products are not just tools; they are integrated solutions built to solve real-world problems in retail, HR, and technical deployment.
             </p>
 
             <div className="mt-8">
                 <a 
                     href="/contact" 
-                    className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30"
+                    className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full text-white bg-indigo-600 hover:bg-indigo-700 transition-colors shadow-lg shadow-indigo-500/30"
                 >
                     Contact Us &rarr;
                 </a>
